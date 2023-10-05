@@ -9,8 +9,19 @@ async function bootstrap() {
 
   app.useGlobalPipes(
     new ValidationPipe({
+      // Se utiliza para permitir o prohibir la validación de propiedades que no están definidas en el DTO
       whitelist: true,
+
+      // Se utiliza para lanzar una excepción si se encuentra una propiedad que no está definida en el DTO.
       forbidNonWhitelisted: true,
+
+      // Se utiliza para habilitar o deshabilitar la transformación de los datos de entrada.
+      transform: true,
+
+      // Opciones adicionales
+      transformOptions: {
+        enableImplicitConversion: true,
+      },
     }),
   );
 

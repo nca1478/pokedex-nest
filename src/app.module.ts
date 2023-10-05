@@ -8,10 +8,12 @@ import { SeedModule } from './seed/seed.module';
 
 @Module({
   imports: [
+    // definir una carpeta de archivos estaticos
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
     }),
 
+    // definir la conexión con mongodb
     MongooseModule.forRoot('mongodb://localhost:27017/nest-pokemon'),
 
     PokemonModule,
