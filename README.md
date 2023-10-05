@@ -32,5 +32,7 @@ GET http://localhost:3000/api/v2/seed
 
 # Stack
 
-- Mongodb
+- Nodejs
 - Nest
+- Mongodb
+- Docker

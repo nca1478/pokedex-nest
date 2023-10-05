@@ -5,6 +5,7 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  // Definir prefijos en las rutas de la api
   app.setGlobalPrefix('api/v2');
 
   app.useGlobalPipes(
