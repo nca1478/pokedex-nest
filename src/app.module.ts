@@ -7,12 +7,15 @@ import { PokemonModule } from './pokemon/pokemon.module';
 import { CommonModule } from './common/common.module';
 import { SeedModule } from './seed/seed.module';
 import { EnvConfiguration } from './config/env.config';
+import { JoiValidationSchema } from './config/joi.validation';
 
 @Module({
   imports: [
     // modulo para definir variables de entorno
+    // load y validationSchema pueden trabajar en conjunto
     ConfigModule.forRoot({
       load: [EnvConfiguration],
+      validationSchema: JoiValidationSchema,
     }),
 
     // definir una carpeta con archivos estaticos
