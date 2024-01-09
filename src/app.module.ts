@@ -24,7 +24,7 @@ import { JoiValidationSchema } from './config/joi.validation';
     }),
 
     // definir la conexión con mongodb
-    MongooseModule.forRoot(process.env.MONGODB),
+    MongooseModule.forRoot(process.env.MONGODB, { dbName: 'pokemonsdb' }),
 
     PokemonModule,
 
