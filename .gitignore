@@ -6,6 +6,10 @@
 
 # Env
 .env
+.env.prod
+
+# yarn
+yarn.lock
 
 # Logs
 logs
